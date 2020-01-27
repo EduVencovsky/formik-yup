@@ -2,16 +2,14 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline';
-import useToggle from './hooks/useToggle'
-import Drawer from './components/Drawer'
-import Home from './views/Home'
-import Layers from './views/Layers'
-import NotFound from './views/NotFound'
-import BigForm from './views/BigForm'
-import SimpleForm from './views/SimpleForm'
-import AppBar from './components/AppBar'
+import useToggle from './../../hooks/useToggle'
+import Drawer from './../../components/Drawer'
+import Home from '../../views/Home'
+import Layers from '../../views/Layers'
+import NotFound from '../../views/NotFound'
+import AppBar from '../../components/AppBar'
 
-import { itemList } from './utils/mockData'
+import { itemList } from './../../utils/mockData'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -53,8 +51,7 @@ export default function AuthApp() {
                     <Switch>                    
                         <Route exact path="/" component={Home} />
                         <Route exact path="/Home" component={Home} />
-                        <Route exact path="/BigForm" component={BigForm} />
-                        <Route exact path="/SimpleForm" component={SimpleForm} />
+                        <Route exact path="/Layers" component={Layers} />
                         <Route component={NotFound} />                    
                     </Switch>
                 </div>
